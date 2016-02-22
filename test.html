@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="http://d3js.org/d3.v3.min.js" language="JavaScript"></script>
+    <script src="liquidFillGauge.js" language="JavaScript"></script>
+    <style>
+        .liquidFillGaugeText { font-family: Helvetica; font-weight: bold; }
+    </style>
+</head>
+<body>
+<svg id="fillgauge1"  viewbox="0 0 70% 20%" onclick="gauge1.update(NewValue(colorChange()));"></svg>
+<svg id="fillgauge2" width="30%" height="20%" onclick="gauge2.update(NewValue(colorChange()));"></svg>
+<script language="JavaScript">
+    var gValue1 = NewValue();
+    var gValue2 = 90;
+    var config1 = liquidFillGaugeDefaultSettings();
+    config1.circleColor = "#FF7777";
+    config1.textColor = "#FF4444";
+    config1.waveTextColor = "#FFAAAA";
+    config1.waveColor = colorChange();
+    config1.circleThickness = 0.2;
+    config1.textVertPosition = 0.2;
+    config1.waveAnimateTime = 1000;
+    var gauge1 = loadLiquidFillGauge("fillgauge1", gValue1, config1);
+    var config2 = liquidFillGaugeDefaultSettings();
+    config2.circleColor = "#D4AB6A";
+    config2.textColor = "#553300";
+    config2.waveTextColor = "#805615";
+    config2.waveColor = colorChange();
+    config2.circleThickness = 0.1;
+    config2.circleFillGap = 0.2;
+    config2.textVertPosition = 0.8;
+    config2.waveAnimateTime = 2000;
+    config2.waveHeight = 0.3;
+    config2.waveCount = 1;
+    var gauge2= loadLiquidFillGauge("fillgauge2", gValue1, config2);
+
+    function colorChange(){
+        if (gValue1 <= 40) {
+            return config1.waveColor = "Red";
+            return config2.waveColor = "Red";
+        }
+        else if (gValue1 > 40 && gValue1 <= 60) {
+            return config1.waveColor = "Yellow";
+            return config2.waveColor = "Yellow";
+        }
+        else if (gValue1 > 60 && gValue1 < 100){
+            return config1.waveColor = "Green";
+            return config2.waveColor = "Green";
+        }
+    }
+    
+    function reload(){
+            var container = document.getElementById("fillgauge1");
+            var content = container.innerHTML;
+            container.innerHTML= content;
+            var container2 = document.getElementById("fillgauge2");
+            var content2 = container2.innerHTML;
+            container2.innerHTML= content2;
+        }
+    
+    function NewValue(){
+        if(Math.random() > .5){
+            return gValue1 = Math.round(Math.random()*100);
+        } else {
+            return gValue1 = (Math.random()*100).toFixed(1);
+        }
+        colorChange();
+        reload();
+        
+    }
+</script>
+</body>
+</html>
