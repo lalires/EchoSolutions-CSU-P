@@ -21,13 +21,18 @@
     <link href="css/rtl.min.css" rel="stylesheet" type="text/css">
     <link href="css/themes.min.css" rel="stylesheet" type="text/css">
     <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <style>
+        .whiteicon{
+            color:white;
+        }
 
+    </style>
     <!--[if lt IE 9]>
         <script src="assets/javascripts/ie.min.js"></script>
     <![endif]-->
 </head>
 
-<body class="theme-default main-menu-animated">
+<body class="theme-default main-menu-animated" onload="gMonth()">
 
 <script>var init = [];</script>
 <!-- Demo script --> <script src="js/demo.js"></script> <!-- / Demo script -->
@@ -36,14 +41,14 @@
 
     <div id="main-navbar" class="navbar navbar-inverse" role="navigation">
         <!-- Main menu toggle -->
-        <button type="button" id="main-menu-toggle"><i class="navbar-icon fa fa-bars icon"></i><span class="hide-menu-text">HIDE MENU</span></button>
+        <button type="button" id="main-menu-toggle"><i class="navbar-icon fa fa-bars icon whiteicon"></i><span class="hide-menu-text">HIDE MENU</span></button>
         
         <div class="navbar-inner">
             <!-- Main navbar header -->
             <div class="navbar-header">
 
                 <!-- Logo -->
-                <a href="index.php" class="navbar-brand">
+                <a href="index.php" class="navbar-brand" style="color:white;">
                     WestWind Wood
                 </a>
 
@@ -54,27 +59,13 @@
 
             <div id="main-navbar-collapse" class="collapse navbar-collapse main-navbar-collapse">
                 <div>
-                    <ul class="nav navbar-nav">
-                        <li>
-                            <a href="#">Home</a>
-                        </li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown</a>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">First item</a></li>
-                                <li><a href="#">Second item</a></li>
-                                <li class="divider"></li>
-                                <li><a href="#">Third item</a></li>
-                            </ul>
-                        </li>
-                    </ul> <!-- / .navbar-nav -->
 
                     <div class="right clearfix">
                         <ul class="nav navbar-nav pull-right right-navbar-nav">
                             <li class="nav-icon-btn nav-icon-btn-danger dropdown">
                                 <a href="#notifications" class="dropdown-toggle" data-toggle="dropdown">
                                     <span class="label">5</span>
-                                    <i class="nav-icon fa fa-bullhorn"></i>
+                                    <i class="nav-icon fa fa-bullhorn" style="color:white;"></i>
                                     <span class="small-screen-text">Notifications</span>
                                 </a>
 
@@ -130,131 +121,6 @@
                                     <a href="#" class="notifications-link">MORE NOTIFICATIONS</a>
                                 </div> <!-- / .dropdown-menu -->
                             </li>
-                            <li class="nav-icon-btn nav-icon-btn-success dropdown">
-                                <a href="#messages" class="dropdown-toggle" data-toggle="dropdown">
-                                    <span class="label">10</span>
-                                    <i class="nav-icon fa fa-envelope"></i>
-                                    <span class="small-screen-text">Income messages</span>
-                                </a>
-
-                                <!-- MESSAGES -->
-                                
-                                <!-- Javascript -->
-                                <script>
-                                    init.push(function () {
-                                        $('#main-navbar-messages').slimScroll({ height: 250 });
-                                    });
-                                </script>
-                                <!-- / Javascript -->
-
-                                <div class="dropdown-menu widget-messages-alt no-padding" style="width: 300px;">
-                                    <div class="messages-list" id="main-navbar-messages">
-
-                                        <div class="message">
-                                            <img src="assets/demo/avatars/2.jpg" alt="" class="message-avatar">
-                                            <a href="#" class="message-subject">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a>
-                                            <div class="message-description">
-                                                from <a href="#">Robert Jang</a>
-                                                &nbsp;&nbsp;·&nbsp;&nbsp;
-                                                2h ago
-                                            </div>
-                                        </div> <!-- / .message -->
-
-                                        <div class="message">
-                                            <img src="assets/demo/avatars/3.jpg" alt="" class="message-avatar">
-                                            <a href="#" class="message-subject">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</a>
-                                            <div class="message-description">
-                                                from <a href="#">Michelle Bortz</a>
-                                                &nbsp;&nbsp;·&nbsp;&nbsp;
-                                                2h ago
-                                            </div>
-                                        </div> <!-- / .message -->
-
-                                        <div class="message">
-                                            <img src="assets/demo/avatars/4.jpg" alt="" class="message-avatar">
-                                            <a href="#" class="message-subject">Lorem ipsum dolor sit amet.</a>
-                                            <div class="message-description">
-                                                from <a href="#">Timothy Owens</a>
-                                                &nbsp;&nbsp;·&nbsp;&nbsp;
-                                                2h ago
-                                            </div>
-                                        </div> <!-- / .message -->
-
-                                        <div class="message">
-                                            <img src="assets/demo/avatars/5.jpg" alt="" class="message-avatar">
-                                            <a href="#" class="message-subject">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</a>
-                                            <div class="message-description">
-                                                from <a href="#">Denise Steiner</a>
-                                                &nbsp;&nbsp;·&nbsp;&nbsp;
-                                                2h ago
-                                            </div>
-                                        </div> <!-- / .message -->
-
-                                        <div class="message">
-                                            <img src="assets/demo/avatars/2.jpg" alt="" class="message-avatar">
-                                            <a href="#" class="message-subject">Lorem ipsum dolor sit amet.</a>
-                                            <div class="message-description">
-                                                from <a href="#">Robert Jang</a>
-                                                &nbsp;&nbsp;·&nbsp;&nbsp;
-                                                2h ago
-                                            </div>
-                                        </div> <!-- / .message -->
-
-                                        <div class="message">
-                                            <img src="assets/demo/avatars/2.jpg" alt="" class="message-avatar">
-                                            <a href="#" class="message-subject">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a>
-                                            <div class="message-description">
-                                                from <a href="#">Robert Jang</a>
-                                                &nbsp;&nbsp;·&nbsp;&nbsp;
-                                                2h ago
-                                            </div>
-                                        </div> <!-- / .message -->
-
-                                        <div class="message">
-                                            <img src="assets/demo/avatars/3.jpg" alt="" class="message-avatar">
-                                            <a href="#" class="message-subject">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</a>
-                                            <div class="message-description">
-                                                from <a href="#">Michelle Bortz</a>
-                                                &nbsp;&nbsp;·&nbsp;&nbsp;
-                                                2h ago
-                                            </div>
-                                        </div> <!-- / .message -->
-
-                                        <div class="message">
-                                            <img src="assets/demo/avatars/4.jpg" alt="" class="message-avatar">
-                                            <a href="#" class="message-subject">Lorem ipsum dolor sit amet.</a>
-                                            <div class="message-description">
-                                                from <a href="#">Timothy Owens</a>
-                                                &nbsp;&nbsp;·&nbsp;&nbsp;
-                                                2h ago
-                                            </div>
-                                        </div> <!-- / .message -->
-
-                                        <div class="message">
-                                            <img src="assets/demo/avatars/5.jpg" alt="" class="message-avatar">
-                                            <a href="#" class="message-subject">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</a>
-                                            <div class="message-description">
-                                                from <a href="#">Denise Steiner</a>
-                                                &nbsp;&nbsp;·&nbsp;&nbsp;
-                                                2h ago
-                                            </div>
-                                        </div> <!-- / .message -->
-
-                                        <div class="message">
-                                            <img src="assets/demo/avatars/2.jpg" alt="" class="message-avatar">
-                                            <a href="#" class="message-subject">Lorem ipsum dolor sit amet.</a>
-                                            <div class="message-description">
-                                                from <a href="#">Robert Jang</a>
-                                                &nbsp;&nbsp;·&nbsp;&nbsp;
-                                                2h ago
-                                            </div>
-                                        </div> <!-- / .message -->
-
-                                    </div> <!-- / .messages-list -->
-                                    <a href="#" class="messages-link">MORE MESSAGES</a>
-                                </div> <!-- / .dropdown-menu -->
-                            </li>
-<!-- /3. $END_NAVBAR_ICON_BUTTONS -->
 
                             <li>
                                 <form class="navbar-form pull-left">
@@ -309,27 +175,10 @@
 -->
     <div id="main-menu" role="navigation">
         <div id="main-menu-inner">
-            <div class="menu-content top" id="menu-content-demo">
-                <!-- Menu custom content demo
-                     CSS:        styles/pixel-admin-less/demo.less or styles/pixel-admin-scss/_demo.scss
-                     Javascript: html/assets/demo/demo.js
-                 -->
-                <div>
-                    <div class="text-bg"><span class="text-slim">Welcome,</span> <span class="text-semibold">John</span></div>
-
-                    <img src="assets/demo/avatars/1.jpg" alt="" class="">
-                    <div class="btn-group">
-                        <a href="#" class="btn btn-xs btn-primary btn-outline dark"><i class="fa fa-envelope"></i></a>
-                        <a href="#" class="btn btn-xs btn-primary btn-outline dark"><i class="fa fa-user"></i></a>
-                        <a href="#" class="btn btn-xs btn-primary btn-outline dark"><i class="fa fa-cog"></i></a>
-                        <a href="#" class="btn btn-xs btn-danger btn-outline dark"><i class="fa fa-power-off"></i></a>
-                    </div>
-                    <a href="#" class="close">&times;</a>
-                </div>
-            </div>
+         
             <ul class="navigation">
                 <li>
-                    <a href="index.php"><i class="menu-icon fa fa-dashboard"></i><span class="mm-text">Admin (Will Require Login)</span></a>
+                    <a href="" data-toggle="modal" data-target="#myModal"><i class="menu-icon fa fa-dashboard"></i><span class="mm-text">Admin (Will Require Login)</span></a>          
                 </li>
                 <li class="mm-dropdown">
                     <a href="#"><i class="menu-icon fa fa-th"></i><span class="mm-text">Door Data Entry</span></a>
@@ -338,7 +187,7 @@
                             <a tabindex="-1" href="ripentry.php"><span class="mm-text">RIP Data Entry</span></a>
                         </li>
                         <li>
-                            <a tabindex="-1" href="rpentry.php"><i class="menu-icon fa fa-th-list"></i><span class="mm-text">Rough Panel Data Entry</span></a>
+                            <a tabindex="-1" href="rpentry.php"><span class="mm-text">Rough Panel Data Entry</span></a>
                         </li>
                         <li>
                             <a tabindex="-1" href="fpentry.php"><span class="mm-text">Finished Panel Data Entry</span></a>
@@ -381,7 +230,7 @@
                     </ul>
                 </li>
                 <li class="mm-dropdown">
-                    <a href="#"><i class="menu-icon fa fa-desktop"></i><span class="mm-text">Door Production Reports</span></a>
+                    <a href="#"><i class="menu-icon fa fa-th"></i><span class="mm-text">Door Production Reports</span></a>
                     <ul>
                        <li>
                             <a tabindex="-1" href="orderquery.php"><span class="mm-text">Order Status</span></a>
@@ -401,23 +250,24 @@
                     </ul>
                 </li>
                 <li class="mm-dropdown">
-                    <a href="#"><i class="menu-icon fa fa-desktop"></i><span class="mm-text">Remake Submission & Report</span></a>
+                    <a href="#"><i class="menu-icon fa fa-th"></i><span class="mm-text">Remake Submission & Report</span></a>
                     <ul>
                         <li>
-                            <a tabindex="-1" href="remake.php"><span class="mm-text">Remake Submission</span></a>
+                            <a tabindex="-1" href="remake/remake.php"><span class="mm-text">Remake Submission</span></a>
                         </li>
                         <li>
-                            <a tabindex="-1" href="remakereport.php"><span class="mm-text">Remake List Report</span></a>
+                            <a tabindex="-1" href="remake/remakereport.php"><span class="mm-text">Remake List Report</span></a>
                         </li>
                         <li>
-                            <a tabindex="-1" href="remakereport2.php"><span class="mm-text">Remake Data Report</span></a>
+                            <a tabindex="-1" href="remake/remakereport2.php"><span class="mm-text">Remake Data Report</span></a>
                         </li>
                     </ul>
                 </li>
                 
             </ul> <!-- / .navigation -->
+
             <div class="menu-content">
-                <a href="pages-invoice.html" class="btn btn-primary btn-block btn-outline dark">Create Invoice</a>
+                <a href="pages-invoice.html" class="btn btn-primary btn-block btn-outline dark"><i class="menu-icon fa fa-bar-chart-o"></i> Generate Reports</a>
             </div>
         </div> <!-- / #main-menu-inner -->
     </div> <!-- / #main-menu -->
@@ -425,9 +275,9 @@
 
     <div id="content-wrapper">
         <ul class="breadcrumb breadcrumb-page">
-            <div class="breadcrumb-label text-light-gray">You are here: </div>
-            <li><a href="#">Home</a></li>
-            <li class="active"><a href="#">Dashboard</a></li>
+            <div class="breadcrumb-label text-light-gray" style="color:white;">You are here: </div>
+            <li><a href="#" style="color:white;">Home</a></li>
+            <li class="active"><a href="#" style="color:white;">Dashboard</a></li>
         </ul>
         <div class="page-header">
             
@@ -438,9 +288,6 @@
                 <div class="col-xs-12 col-sm-8">
                     <div class="row">
                         <hr class="visible-xs no-grid-gutter-h">
-                        <!-- "Create project" button, width=auto on desktops -->
-                        <div class="pull-right col-xs-12 col-sm-auto"><a href="#" class="btn btn-primary btn-labeled" style="width: 100%;"><span class="btn-label icon fa fa-plus"></span>Create project</a></div>
-
                         <!-- Margin -->
                         <div class="visible-xs clearfix form-group-margin"></div>
 
@@ -622,15 +469,25 @@
 <!-- 7. $EARNED_TODAY_STAT_PANEL ===================================================================
 
                     Earned today stat panel
+
 -->
+                    <script>
+                        function gMonth(){
+                           var date = new Date();
+                           var month = date.getMonth();
+                           var day = date.getDate();
+                           var year = date.getFullYear();
+                        }
+                        
+                    </script>
                     <div class="col-sm-4 col-md-12">
                         <div class="stat-panel">
                             <!-- Danger background, vertically centered text -->
                             <div class="stat-cell bg-danger valign-middle">
                                 <!-- Stat panel bg icon -->
-                                <i class="fa fa-trophy bg-icon"></i>
+                                <i class="fa fa-calendar bg-icon"></i>
                                 <!-- Extra large text -->
-                                <span class="text-xlg"><span class="text-lg text-slim">$</span><strong>147</strong></span><br>
+                                <span class="text-xlg"><strong id="month"></strong></span><br>
                                 <!-- Big text -->
                                 <span class="text-bg">Earned today</span><br>
                                 <!-- Small text -->
@@ -1486,7 +1343,29 @@
     </div> <!-- / #content-wrapper -->
     <div id="main-menu-bg"></div>
 </div> <!-- / #main-wrapper -->
-
+ <!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog" tabindex="-1" aria-labelledby="myModal">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header" style=" background: url('../images/wood-grain.jpg'); color:white !important; text-align: center; font-size: 30px;">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4><span class="glyphicon glyphicon-lock"></span> Login</h4>
+            </div>
+            <div class="modal-body" style="padding: 40px 50px">
+                <form role="form">
+                    <div class="form-group">
+                         <label for="psword"><span class="glyphicon glyphicon-eye-open"></span> Password</label>
+                         <input type="password" class="form-control" id="psw" placeholder="Enter password" />
+                    </div>
+                     <button type="submit" class="btn btn-success btn-block"><span class="glyphicon glyphicon-off"></span> Login</button>
+                </form>
+            </div>
+            <div class="modal-footer" style="background-color: #f9f9f9;">
+                 <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
+            </div>
+        </div>
+    </div>      
 <!-- Get jQuery from Google CDN -->
 <!--[if !IE]> -->
     <script type="text/javascript"> window.jQuery || document.write('<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js">'+"<"+"/script>"); </script>
